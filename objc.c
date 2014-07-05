@@ -1058,7 +1058,8 @@ static void globalScope (vString * const ident, objcToken what)
 		break;
 
 	case ObjcINTERFACE:
-		toDoNext = &parseInterface;
+		//toDoNext = &parseInterface;   this is buggy --vp
+		toDoNext = &parseImplementation;
 		break;
 
 	case ObjcIMPLEMENTATION:
